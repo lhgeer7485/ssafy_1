@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for x in food %}
+        <p>{{x}}</p>
+    {% endfor %}
+    <div class='d-flex'>
+        <label for="n1">주문란 : </label>
+        <form action="{% url "receipt" %}">
+            <input type="text" id='n1' class='ms-2'>
+            <input type="submit" value='주문하기'>
+        </form>
+    </div>
+    
+{% endblock content %}

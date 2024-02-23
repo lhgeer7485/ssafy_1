@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class='my-4'>계산결과</h1>
+    <p>{{n1}} + {{n2}} = {{n1|add:n2}}</p>
+    <p>{{n1}} * {{n2}} = {{mul}}</p>
+    <p>{{n1}} - {{n2}} = {{sub}}</p>
+    {% if div == None %}
+        <p>계산할 수 없습니다.</p>
+    {% else %}
+        <p>{{n1}} / {{n2}} = {{div}}</p>
+    {% endif %}
+
+{% endblock content %}

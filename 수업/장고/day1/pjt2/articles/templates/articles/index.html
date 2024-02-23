@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>여기가 articles</p>
+    <a href="{% url "articles:catch" "김싸피" 1 %}">catch로 이동</a>
+{% endblock content %}

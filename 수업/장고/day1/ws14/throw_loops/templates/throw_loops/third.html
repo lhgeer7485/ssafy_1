@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>oops! I catch only {{n2}} ㅠㅠ</p>
+
+    <form action="{% url "first" %}">
+        <span>throw! </span>
+        <input type="text" name='message1'>
+        <input type="submit" value='휙'>
+    </form>
+{% endblock content %}

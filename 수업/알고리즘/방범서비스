@@ -1,0 +1,51 @@
+def fnc():
+    h_max = 0
+    for i in range(N):
+        for j in range(N):
+            if data[i][j] == 1:
+                h_max += 1
+    k_max = 1
+    while h_max * M - (k_max * k_max + (k_max - 1) * (k_max - 1)) >= 0:
+        k_max += 1
+
+    max_h = 0
+    for k in reversed(range(1, k_max + 1)):
+        house = find(k)
+        cost = k * k + (k - 1) * (k - 1)
+        profit = M * house - cost
+        if profit >= 0 and max_h < house:
+            max_h = house
+
+    return max_h
+
+
+def find(k):
+    result = 0
+
+    for i in range(N):
+        for j in range(N):
+            h = 0
+            x = 0
+            for a in range(i - k + 1, i + k):
+                for b in range(j - x, j + x + 1):
+                    if 0 <= a < N and 0 <= b < N:
+                        if data[a][b] == 1:
+                            h += 1
+                if a < i:
+                    x += 1
+                else:
+                    x -= 1
+            if result < h:
+                result = h
+
+    return result
+
+########################## main ##############################
+T = int(input())
+
+for tc in range(1, T + 1):
+    N, M = map(int, input().split())
+
+    data = [list(map(int, input().split())) for _ in range(N)]
+
+    print(f'#{tc} {fnc()}')

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      border: 1px solid black;
+      height: 100px;
+    }
+    @Media screen and (max-width:100px) and (min-width:50px){
+      .hello{
+        color: red;
+      }
+      .container{
+        width: 60px;
+        margin: 0 auto;
+      }
+    }
+    @Media screen and (max-width:150px) and (min-width:101px){
+      .hello{
+        color: orange;
+      }
+      .container{
+        width: 130px;
+        margin: 0 auto;
+      }
+    }
+    @Media screen and (max-width:200px) and (min-width:151px){
+      .hello{
+        color: yellow;
+      }
+      .container{
+        width: 180px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hello">Hello</div>
+</body>
+</html>

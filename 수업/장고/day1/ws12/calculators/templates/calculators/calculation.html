@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class='my-4'>연산할 두 숫자를 입력하세요</h1>
+
+    <form action="{% url "result" %}" class='d-flex'>
+        <label for="input_1" class='ms-2'>첫번째 숫자 : </label>
+        <input type="text" id='input_1' class='ms-2' name='n1'>
+        <label for="input_2" class='ms-2'>두번째 숫자 : </label>
+        <input type="text" id='input_2' class='ms-2' name='n2'>
+        <input type="submit" class='ms-2' value='계산!'>
+    </form>
+
+    
+{% endblock content %}

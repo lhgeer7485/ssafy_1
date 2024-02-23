@@ -1,0 +1,100 @@
+*{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.frontpage{
+  height: 300px;
+  background-color: lightslategray;
+}
+
+.intro{
+  height: 300px;
+}
+
+.project{
+  height: 300px;
+  background-color: lightgray;
+}
+
+.skills{
+  height: 300px;
+}
+
+.footer{
+  height: 50px;
+  background-color: black;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-provided{
+  display: none;
+}
+
+@media (max-width: 470px) {
+  main,
+  section,
+  nav,
+  footer{
+    display: none;
+  }
+  .not-provided{
+    display: block;
+  }
+  
+}
+
+.img-logo{
+  width: 100px;
+  height: 50px;
+}
+
+.text{
+  font-size: 20px;
+}
+
+input{
+  width: 100%;
+}
+
+@media screen and (min-width: 1400px){
+  header{
+    width: 1320px;
+  }
+}
+
+.text2{
+  font-size: 70px;
+}
+
+.box{
+  border-style: solid;
+  border-color: lightgray;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 2px;
+  border-bottom-width: 0;
+}
+
+.change2{
+  display: none;
+}
+
+@media screen and (min-width: 992px){
+  .change{
+    display: none;
+  }
+  .change2{
+    display: flex
+  }  
+}
+
+.img-size{
+  max-height: 446px;
+}

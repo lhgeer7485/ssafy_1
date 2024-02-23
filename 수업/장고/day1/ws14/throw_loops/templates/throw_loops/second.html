@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>catch! I catch {{n1}}!</p>
+    
+    <form action="{% url "third" %}">
+        <span>and throw! </span>
+        <input type="text" name='message1' value={{n1}}>
+        <span>twice!</span>
+        <input type="text" name='message2'>
+        <input type="submit" value='휙'>
+    </form>
+{% endblock content %}
